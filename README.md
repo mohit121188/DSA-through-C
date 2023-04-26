@@ -1,2 +1,2 @@
-# DataStructures-through-C
-This Repository consists of different Data Structures implemented in C Language 
+# DSA through C
+This Repository consists of different Data Structures Algorithms implemented in C Language 
