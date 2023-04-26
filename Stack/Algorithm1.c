@@ -1,4 +1,4 @@
-/*Algorithm to implement push and pop operation on the stack*/
+<b>/*Algorithm to implement push and pop operation on the stack*/</b>
 #include<stdio.h>
 #define max 5 //assuming max size of stack is 5, so defined a macro max
 /*defining a structure named Stack, consists an int type array of
