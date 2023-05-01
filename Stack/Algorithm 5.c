@@ -1,4 +1,5 @@
-/*Write a program in C to convert an infix expression into the postfix expression using stack.*/
+/*Write a program in C to convert an infix expression into the postfix expression using stack. Assumption:- user will enter valid infix expression, each operand
+having alphabate or single digit as operand, infix expression is without parenthesis*/
 #include<stdio.h>
 #include<ctype.h>
 #define max 30
