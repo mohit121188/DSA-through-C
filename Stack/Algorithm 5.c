@@ -93,7 +93,7 @@ void convert(char postfix[],char infix[])
                     break;
                 }
                 else
-                    if(cmp_prcd(prcd(peek(s)),prcd(ch)))
+                    if(cmp_prcd(peek(s),prcd(ch)))
                     {
                         push(&s,ch);
                         break;
@@ -112,4 +112,3 @@ void convert(char postfix[],char infix[])
     }
     postfix[j]=NULL;
 }
-
