@@ -78,3 +78,14 @@ int main() {
     }
     return 0;
 }
+
+
+/*output : 
+Enter 4 integers: 4 2 5 25
+
+Next greater element of 4 is 5
+Next greater element of 2 is 5
+Next greater element of 5 is 25
+Next greater element of 25 is -1
+Process returned 0 (0x0)   execution time : 9.052 s
+Press any key to continue. */
