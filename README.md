@@ -12,3 +12,4 @@ Assumption:- here user will enter prefix expression with single digit operand on
 each operand can be either a single digit or a single alphbate. note: user can enter infix expression containing parenthesis also.
 <br><b>Program 8:</b>infix to prefix conversion. assumptions: user will enter valid infix expression only, max length of operand can be single digit or single
 alphabet, parenthesis are also allowed in the infix expression
+<br><b>Program 9:</b>Given a string containing parentheses (e.g., "(()())"), determine whether the parentheses are balanced or not.
