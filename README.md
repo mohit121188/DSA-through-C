@@ -13,3 +13,10 @@ each operand can be either a single digit or a single alphbate. note: user can e
 <br><b>Program 8:</b>infix to prefix conversion. assumptions: user will enter valid infix expression only, max length of operand can be single digit or single
 alphabet, parenthesis are also allowed in the infix expression
 <br><b>Program 9:</b>Given a string containing parentheses (e.g., "(()())"), determine whether the parentheses are balanced or not.
+<br><br>
+<b>QUEUE</b>
+<br><b>Program 1:</b>Program to implement a linear queue.
+<br><b>Program 2:</b>Implement enqueue and dequeue operation on circular queue of max size 5.
+<br><b>Program 3:</b>Write a C program to count the number of elements in a Linear queue.
+<br><b>Program 4:</b>Write a C program to count the number of elements in a Circular queue.
+<br><b>Program 5:</b>Write a C program to reverse the elements of a linear queue. containing integer elements assumption: max size of linear queue 5.
