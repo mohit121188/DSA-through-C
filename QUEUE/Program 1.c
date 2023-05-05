@@ -5,7 +5,7 @@ Step 1: Check for OVERFLOW
 Step 2: if the QUEUE is FULL then print the message QUEUE OVERFLOW and RETURN.
 Step 3: if the QUEUE is NOT FULL then increment REAR by 1.
 Step 4: INSERT the element in the QUEUE at the position pointed/marked by REAR.
-Step 5: FINISH and RETURN 
+Step 5: FINISH and RETURN
 
 dequeue Algorithm:
 Step 1: Check for UNDERFLOW
@@ -45,7 +45,7 @@ int main()
             enqueue(&q,x);
             break;
         case 2:
-            printf("\nRemoved element : %d",dequeue(&q));
+            printf("\nRemoved element : %d\n",dequeue(&q));
             break;
         case 3:
             printf("\nQuitting the Application");
@@ -83,15 +83,22 @@ int dequeue(queue *pq)
         return -1;
     }
     x=pq->arr[pq->front];
-    if(pq->front==max-1)
+    if(pq->front==pq->rear)
         pq->front=pq->rear=-1;
     else
         pq->front=pq->front+1;
     return(x);
 }
-
 /*
-Sample Output: 
+Select the operation :
+1.enqueue
+2.dequeue
+3.quit
+Enter your choice : 2
+
+Queue Underflow
+
+Removed element : -1
 
 Select the operation :
 1.enqueue
@@ -105,79 +112,10 @@ Select the operation :
 1.enqueue
 2.dequeue
 3.quit
-Enter your choice : 1
-
-Enter element : 20
-
-Select the operation :
-1.enqueue
-2.dequeue
-3.quit
-Enter your choice : 1
-
-Enter element : 30
-
-Select the operation :
-1.enqueue
-2.dequeue
-3.quit
-Enter your choice : 1
-
-Enter element : 40
-
-Select the operation :
-1.enqueue
-2.dequeue
-3.quit
-Enter your choice : 1
-
-Enter element : 50
-
-Select the operation :
-1.enqueue
-2.dequeue
-3.quit
-Enter your choice : 1
-
-Enter element : 60
-
-Queue is overflow!!
-
-Select the operation :
-1.enqueue
-2.dequeue
-3.quit
 Enter your choice : 2
 
 Removed element : 10
-Select the operation :
-1.enqueue
-2.dequeue
-3.quit
-Enter your choice : 2
 
-Removed element : 20
-Select the operation :
-1.enqueue
-2.dequeue
-3.quit
-Enter your choice : 2
-
-Removed element : 30
-Select the operation :
-1.enqueue
-2.dequeue
-3.quit
-Enter your choice : 2
-
-Removed element : 40
-Select the operation :
-1.enqueue
-2.dequeue
-3.quit
-Enter your choice : 2
-
-Removed element : 50
 Select the operation :
 1.enqueue
 2.dequeue
@@ -187,6 +125,165 @@ Enter your choice : 2
 Queue Underflow
 
 Removed element : -1
+
+Select the operation :
+1.enqueue
+2.dequeue
+3.quit
+Enter your choice : 1
+
+Enter element : 100
+
+Select the operation :
+1.enqueue
+2.dequeue
+3.quit
+Enter your choice : 1
+
+Enter element : 200
+
+Select the operation :
+1.enqueue
+2.dequeue
+3.quit
+Enter your choice : 1
+
+Enter element : 300
+
+Select the operation :
+1.enqueue
+2.dequeue
+3.quit
+Enter your choice : 2
+
+Removed element : 100
+
+Select the operation :
+1.enqueue
+2.dequeue
+3.quit
+Enter your choice : 2
+
+Removed element : 200
+
+Select the operation :
+1.enqueue
+2.dequeue
+3.quit
+Enter your choice : 2
+
+Removed element : 300
+
+Select the operation :
+1.enqueue
+2.dequeue
+3.quit
+Enter your choice : 2
+
+Queue Underflow
+
+Removed element : -1
+
+Select the operation :
+1.enqueue
+2.dequeue
+3.quit
+Enter your choice : 1
+
+Enter element : 1000
+
+Select the operation :
+1.enqueue
+2.dequeue
+3.quit
+Enter your choice : 1
+
+Enter element : 2000
+
+Select the operation :
+1.enqueue
+2.dequeue
+3.quit
+Enter your choice : 1
+
+Enter element : 3000
+
+Select the operation :
+1.enqueue
+2.dequeue
+3.quit
+Enter your choice : 1
+
+Enter element : 4000
+
+Select the operation :
+1.enqueue
+2.dequeue
+3.quit
+Enter your choice : 1
+
+Enter element : 5000
+
+Select the operation :
+1.enqueue
+2.dequeue
+3.quit
+Enter your choice : 1
+
+Enter element : 6000
+
+Queue is overflow!!
+
+Select the operation :
+1.enqueue
+2.dequeue
+3.quit
+Enter your choice : 2
+
+Removed element : 1000
+
+Select the operation :
+1.enqueue
+2.dequeue
+3.quit
+Enter your choice : 2
+
+Removed element : 2000
+
+Select the operation :
+1.enqueue
+2.dequeue
+3.quit
+Enter your choice : 2
+
+Removed element : 3000
+
+Select the operation :
+1.enqueue
+2.dequeue
+3.quit
+Enter your choice : 2
+
+Removed element : 4000
+
+Select the operation :
+1.enqueue
+2.dequeue
+3.quit
+Enter your choice : 2
+
+Removed element : 5000
+
+Select the operation :
+1.enqueue
+2.dequeue
+3.quit
+Enter your choice : 2
+
+Queue Underflow
+
+Removed element : -1
+
 Select the operation :
 1.enqueue
 2.dequeue
@@ -194,5 +291,6 @@ Select the operation :
 Enter your choice : 3
 
 Quitting the Application
-Process returned 0 (0x0)   execution time : 399.998 s
-Press any key to continue.*/
+Process returned 0 (0x0)   execution time : 56.523 s
+Press any key to continue.
+*/
