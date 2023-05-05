@@ -39,13 +39,14 @@ int main()
             printf("\nenter element : ");
             scanf("%d",&x);
             enqueue(&q,x);
+            printf("Front=%d, Rear=%d\n",q.front,q.rear);
             break;
         case 2:
             printf("\nremoved element : %d\n",dequeue(&q));
+            printf("\nFront=%d, Rear=%d\n",q.front,q.rear);
             break;
         case 3:
             reverse(&q);
-            printf("\nQueue reversed successfully\n");
             break;
         case 4:
             printf("\nQuitting");
@@ -105,7 +106,7 @@ int dequeue(lqueue *pq)
         return -1;
     }
     x=pq->arr[pq->front];
-    if(pq->front==max-1&&pq->rear==max-1)
+    if(pq->front==pq->rear)
     {
         pq->front=pq->rear=-1;
     }
@@ -124,16 +125,29 @@ void reverse(lqueue *pq)
     int i;
     stack s;
     s.tos=-1;
-    for(i=pq->front;i<=pq->rear;i++)
-        push(&s,pq->arr[i]);
-    i=pq->front;
+    if(pq->rear==-1&&pq->front==-1)
+    {
+        printf("\nLinear Queue is Empty\n");
+        return;
+    }
+    if(pq->rear==pq->front)
+    {
+        printf("\nSuccessfully Reversed\n");
+        return;
+    }
+    while(isempty_lqueue(*pq)!=1)
+    {
+        push(&s,dequeue(pq));
+    }
     while(isempty_stack(s)!=1)
     {
-        pq->arr[i++]=pop(&s);
+        enqueue(pq,pop(&s));
     }
+    printf("\nSuccessfully Reversed\n");
 }
 
-/*sample output : 
+/* sample output : 
+
 
 Select the operation :
 1.enqueue
@@ -143,42 +157,16 @@ Select the operation :
 Enter your choice : 1
 
 enter element : 10
+Front=0, Rear=0
 
 Select the operation :
 1.enqueue
 2.dequeue
 3.reverse
 4.quit
-Enter your choice : 1
+Enter your choice : 3
 
-enter element : 20
-
-Select the operation :
-1.enqueue
-2.dequeue
-3.reverse
-4.quit
-Enter your choice : 1
-
-enter element : 30
-
-Select the operation :
-1.enqueue
-2.dequeue
-3.reverse
-4.quit
-Enter your choice : 1
-
-enter element : 40
-
-Select the operation :
-1.enqueue
-2.dequeue
-3.reverse
-4.quit
-Enter your choice : 1
-
-enter element : 50
+Successfully Reversed
 
 Select the operation :
 1.enqueue
@@ -189,14 +177,69 @@ Enter your choice : 2
 
 removed element : 10
 
+Front=-1, Rear=-1
+
 Select the operation :
 1.enqueue
 2.dequeue
 3.reverse
 4.quit
-Enter your choice : 2
+Enter your choice : 1
 
-removed element : 20
+enter element : 10
+Front=0, Rear=0
+
+Select the operation :
+1.enqueue
+2.dequeue
+3.reverse
+4.quit
+Enter your choice : 1
+
+enter element : 20
+Front=0, Rear=1
+
+Select the operation :
+1.enqueue
+2.dequeue
+3.reverse
+4.quit
+Enter your choice : 1
+
+enter element : 30
+Front=0, Rear=2
+
+Select the operation :
+1.enqueue
+2.dequeue
+3.reverse
+4.quit
+Enter your choice : 1
+
+enter element : 40
+Front=0, Rear=3
+
+Select the operation :
+1.enqueue
+2.dequeue
+3.reverse
+4.quit
+Enter your choice : 1
+
+enter element : 50
+Front=0, Rear=4
+
+Select the operation :
+1.enqueue
+2.dequeue
+3.reverse
+4.quit
+Enter your choice : 1
+
+enter element : 60
+
+!!!Linear Queue Overflow!!!
+Front=0, Rear=4
 
 Select the operation :
 1.enqueue
@@ -205,7 +248,7 @@ Select the operation :
 4.quit
 Enter your choice : 3
 
-Queue reversed successfully
+Successfully Reversed
 
 Select the operation :
 1.enqueue
@@ -216,6 +259,8 @@ Enter your choice : 2
 
 removed element : 50
 
+Front=1, Rear=4
+
 Select the operation :
 1.enqueue
 2.dequeue
@@ -225,6 +270,49 @@ Enter your choice : 2
 
 removed element : 40
 
+Front=2, Rear=4
+
+Select the operation :
+1.enqueue
+2.dequeue
+3.reverse
+4.quit
+Enter your choice : 3
+
+Successfully Reversed
+
+Select the operation :
+1.enqueue
+2.dequeue
+3.reverse
+4.quit
+Enter your choice : 1
+
+enter element : 60
+Front=0, Rear=3
+
+Select the operation :
+1.enqueue
+2.dequeue
+3.reverse
+4.quit
+Enter your choice : 2
+
+removed element : 10
+
+Front=1, Rear=3
+
+Select the operation :
+1.enqueue
+2.dequeue
+3.reverse
+4.quit
+Enter your choice : 2
+
+removed element : 20
+
+Front=2, Rear=3
+
 Select the operation :
 1.enqueue
 2.dequeue
@@ -233,6 +321,19 @@ Select the operation :
 Enter your choice : 2
 
 removed element : 30
+
+Front=3, Rear=3
+
+Select the operation :
+1.enqueue
+2.dequeue
+3.reverse
+4.quit
+Enter your choice : 2
+
+removed element : 60
+
+Front=-1, Rear=-1
 
 Select the operation :
 1.enqueue
@@ -245,6 +346,8 @@ Enter your choice : 2
 
 removed element : -1
 
+Front=-1, Rear=-1
+
 Select the operation :
 1.enqueue
 2.dequeue
@@ -253,7 +356,6 @@ Select the operation :
 Enter your choice : 4
 
 Quitting
-Process returned 0 (0x0)   execution time : 31.120 s
+Process returned 0 (0x0)   execution time : 175.523 s
 Press any key to continue.
-
 */
