@@ -31,10 +31,10 @@ int main()
             enqueue(&q,x);
             break;
         case 2:
-            printf("\nRemoved element is %d",dequeue(&q));
+            printf("\nRemoved element is %d\n",dequeue(&q));
             break;
         case 3:
-            printf("\nNo. of elmement : %d",count(q));
+            printf("\nNo. of elmement : %d\n",count(q));
             break;
         case 4:
             printf("\nQuitting");
@@ -71,7 +71,7 @@ int dequeue(queue *pq)
         return -1;
     }
     x=pq->arr[pq->front];
-    if(pq->front==max-1&&pq->rear==max-1)
+    if(pq->front==pq->rear)
     {
         pq->front=pq->rear=-1;
     }
@@ -91,8 +91,136 @@ int count(queue q)
     return(q.rear-q.front+1);
 
 }
+/*Sample Output: 
 
-/* sample output : 
+select the operation :
+1.enqueue
+2.dequeue
+3.count
+4.quit
+Enter your choice : 3
+
+No. of elmement : 0
+
+select the operation :
+1.enqueue
+2.dequeue
+3.count
+4.quit
+Enter your choice : 1
+
+Enter the element : 10
+
+select the operation :
+1.enqueue
+2.dequeue
+3.count
+4.quit
+Enter your choice : 2
+
+Removed element is 10
+
+select the operation :
+1.enqueue
+2.dequeue
+3.count
+4.quit
+Enter your choice : 2
+
+Queue underflow
+Removed element is -1
+
+select the operation :
+1.enqueue
+2.dequeue
+3.count
+4.quit
+Enter your choice : 3
+
+No. of elmement : 0
+
+select the operation :
+1.enqueue
+2.dequeue
+3.count
+4.quit
+Enter your choice : 1
+
+Enter the element : 10
+
+select the operation :
+1.enqueue
+2.dequeue
+3.count
+4.quit
+Enter your choice : 1
+
+Enter the element : 20
+
+select the operation :
+1.enqueue
+2.dequeue
+3.count
+4.quit
+Enter your choice : 1
+
+Enter the element : 30
+
+select the operation :
+1.enqueue
+2.dequeue
+3.count
+4.quit
+Enter your choice : 3
+
+No. of elmement : 3
+
+select the operation :
+1.enqueue
+2.dequeue
+3.count
+4.quit
+Enter your choice : 2
+
+Removed element is 10
+
+select the operation :
+1.enqueue
+2.dequeue
+3.count
+4.quit
+Enter your choice : 2
+
+Removed element is 20
+
+select the operation :
+1.enqueue
+2.dequeue
+3.count
+4.quit
+Enter your choice : 2
+
+Removed element is 30
+
+select the operation :
+1.enqueue
+2.dequeue
+3.count
+4.quit
+Enter your choice : 3
+
+No. of elmement : 0
+
+select the operation :
+1.enqueue
+2.dequeue
+3.count
+4.quit
+Enter your choice : 2
+
+Queue underflow
+Removed element is -1
+
 select the operation :
 1.enqueue
 2.dequeue
@@ -156,130 +284,7 @@ select the operation :
 Enter your choice : 3
 
 No. of elmement : 5
-select the operation :
-1.enqueue
-2.dequeue
-3.count
-4.quit
-Enter your choice : 2
 
-Removed element is 10
-select the operation :
-1.enqueue
-2.dequeue
-3.count
-4.quit
-Enter your choice : 2
-
-Removed element is 20
-select the operation :
-1.enqueue
-2.dequeue
-3.count
-4.quit
-Enter your choice : 3
-
-No. of elmement : 3
-select the operation :
-1.enqueue
-2.dequeue
-3.count
-4.quit
-Enter your choice : 2
-
-Removed element is 30
-select the operation :
-1.enqueue
-2.dequeue
-3.count
-4.quit
-Enter your choice : 2
-
-Removed element is 40
-select the operation :
-1.enqueue
-2.dequeue
-3.count
-4.quit
-Enter your choice : 2
-
-Removed element is 50
-select the operation :
-1.enqueue
-2.dequeue
-3.count
-4.quit
-Enter your choice : 2
-
-Queue underflow
-Removed element is -1
-select the operation :
-1.enqueue
-2.dequeue
-3.count
-4.quit
-Enter your choice : 3
-
-No. of elmement : 0
-select the operation :
-1.enqueue
-2.dequeue
-3.count
-4.quit
-Enter your choice : 1
-
-Enter the element : 70
-
-select the operation :
-1.enqueue
-2.dequeue
-3.count
-4.quit
-Enter your choice : 1
-
-Enter the element : 80
-
-select the operation :
-1.enqueue
-2.dequeue
-3.count
-4.quit
-Enter your choice : 3
-
-No. of elmement : 2
-select the operation :
-1.enqueue
-2.dequeue
-3.count
-4.quit
-Enter your choice : 1
-
-Enter the element : 90
-
-select the operation :
-1.enqueue
-2.dequeue
-3.count
-4.quit
-Enter your choice : 2
-
-Removed element is 70
-select the operation :
-1.enqueue
-2.dequeue
-3.count
-4.quit
-Enter your choice : 2
-
-Removed element is 80
-select the operation :
-1.enqueue
-2.dequeue
-3.count
-4.quit
-Enter your choice : 3
-
-No. of elmement : 1
 select the operation :
 1.enqueue
 2.dequeue
@@ -288,6 +293,6 @@ select the operation :
 Enter your choice : 4
 
 Quitting
-Process returned 0 (0x0)   execution time : 100.805 s
+Process returned 0 (0x0)   execution time : 68.943 s
 Press any key to continue.
 */
