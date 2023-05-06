@@ -1,19 +1,20 @@
 /*Write a C program to count the number of elements in a Circular queue.*/
 #include<stdio.h>
-#define max 5
+#define MAX 5
+#define DEFAULTS {.rear=-1,.front=-1}
 struct cqueue
 {
-    int arr[max],front,rear;
+    int arr[MAX],front,rear;
 };
 typedef struct cqueue cqueue;
 void enqueue(cqueue *,int);
 int dequeue(cqueue *);
+int isempty(cqueue);
 int count(cqueue);
 int main()
 {
     int choice,x;
-    cqueue q;
-    q.front=q.rear=-1;
+    cqueue q=DEFAULTS;
     do
     {
         printf("\nSelect the operation : ");
@@ -47,70 +48,77 @@ int main()
 }
 void enqueue(cqueue *pq,int x)
 {
-    if((pq->rear==max-1&&pq->front==0)||(pq->rear+1==pq->front))
+    if((pq->rear==MAX-1&&pq->front==0)||(pq->rear+1==pq->front))
     {
         printf("\n!!!Circular Queue Overflow!!!\n");
         return;
     }
     else
-    if(pq->rear==-1&&pq->front==-1)
-    {
+    if(pq->rear==-1)
         pq->rear=pq->front=0;
-    }
     else
-    if(pq->rear==max-1&&pq->front!=max-1)
-    {
+    if(pq->rear==MAX-1)
         pq->rear=0;
-    }
     else
-    {
-        pq->rear=pq->rear+1;
-    }
+        pq->rear++;
     pq->arr[pq->rear]=x;
 }
 
 int dequeue(cqueue *pq)
 {
     int x;
-    if(pq->front==-1&&pq->rear==-1)
+    if(pq->front==-1)
     {
         printf("\n!!!Circular Queue Underflow!!!\n");
         return -1;
     }
     x=pq->arr[pq->front];
     if(pq->rear==pq->front)
-    {
         pq->rear=pq->front=-1;
-    }
     else
-    if(pq->front==max-1&&pq->rear!=max-1)
-    {
+    if(pq->front==MAX-1)
         pq->front=0;
-    }
     else
-    {
-        pq->front=pq->front+1;
-    }
+        pq->front++;
     return x;
 }
 
+int isempty(cqueue q)
+{
+    return(q.rear==-1);
+}
 int count(cqueue q)
 {
-    if(q.front==-1&&q.rear==-1)
-        return 0;
-    else
-    if(q.rear==q.front)
-        return 1;
-    else
-    if(q.rear>q.front)
-        return(q.rear-q.front+1);
-    else
-    if(q.front>q.rear)
-        return(max-q.front+q.rear+1);
+    int k=0;
+    while(isempty(q)!=1)
+    {
+        dequeue(&q);
+        k++;
+    }
+    return k;
 }
 
-/*
-Sample Output : 
+/* SAMPLE OUTPUT
+
+Select the operation :
+1.enqueue
+2.dequeue
+3.count
+4.exit
+Enter your choice : 2
+
+!!!Circular Queue Underflow!!!
+
+Removed elmement : -1
+Select the operation :
+1.enqueue
+2.dequeue
+3.count
+4.exit
+Enter your choice : 3
+
+No. of elmements : 0
+
 Select the operation :
 1.enqueue
 2.dequeue
@@ -134,36 +142,9 @@ Select the operation :
 2.dequeue
 3.count
 4.exit
-Enter your choice : 1
-
-Enter element : 30
-
-Select the operation :
-1.enqueue
-2.dequeue
-3.count
-4.exit
-Enter your choice : 1
-
-Enter element : 40
-
-Select the operation :
-1.enqueue
-2.dequeue
-3.count
-4.exit
-Enter your choice : 1
-
-Enter element : 50
-
-Select the operation :
-1.enqueue
-2.dequeue
-3.count
-4.exit
 Enter your choice : 3
 
-No. of elmements : 5
+No. of elmements : 2
 
 Select the operation :
 1.enqueue
@@ -186,9 +167,65 @@ Select the operation :
 2.dequeue
 3.count
 4.exit
+Enter your choice : 3
+
+No. of elmements : 0
+
+Select the operation :
+1.enqueue
+2.dequeue
+3.count
+4.exit
 Enter your choice : 1
 
-Enter element : 60
+Enter element : 100
+
+Select the operation :
+1.enqueue
+2.dequeue
+3.count
+4.exit
+Enter your choice : 1
+
+Enter element : 200
+
+Select the operation :
+1.enqueue
+2.dequeue
+3.count
+4.exit
+Enter your choice : 1
+
+Enter element : 300
+
+Select the operation :
+1.enqueue
+2.dequeue
+3.count
+4.exit
+Enter your choice : 1
+
+Enter element : 400
+
+Select the operation :
+1.enqueue
+2.dequeue
+3.count
+4.exit
+Enter your choice : 1
+
+Enter element : 500
+
+Select the operation :
+1.enqueue
+2.dequeue
+3.count
+4.exit
+Enter your choice : 1
+
+Enter element : 600
+
+!!!Circular Queue Overflow!!!
 
 Select the operation :
 1.enqueue
@@ -197,7 +234,7 @@ Select the operation :
 4.exit
 Enter your choice : 3
 
-No. of elmements : 4
+No. of elmements : 5
 
 Select the operation :
 1.enqueue
@@ -206,7 +243,7 @@ Select the operation :
 4.exit
 Enter your choice : 2
 
-Removed elmement : 30
+Removed elmement : 100
 Select the operation :
 1.enqueue
 2.dequeue
@@ -214,7 +251,45 @@ Select the operation :
 4.exit
 Enter your choice : 2
 
-Removed elmement : 40
+Removed elmement : 200
+Select the operation :
+1.enqueue
+2.dequeue
+3.count
+4.exit
+Enter your choice : 1
+
+Enter element : 600
+
+Select the operation :
+1.enqueue
+2.dequeue
+3.count
+4.exit
+Enter your choice : 1
+
+Enter element : 700
+
+Select the operation :
+1.enqueue
+2.dequeue
+3.count
+4.exit
+Enter your choice : 1
+
+Enter element : 800
+
+!!!Circular Queue Overflow!!!
+
+Select the operation :
+1.enqueue
+2.dequeue
+3.count
+4.exit
+Enter your choice : 3
+
+No. of elmements : 5
+
 Select the operation :
 1.enqueue
 2.dequeue
@@ -222,7 +297,7 @@ Select the operation :
 4.exit
 Enter your choice : 2
 
-Removed elmement : 50
+Removed elmement : 300
 Select the operation :
 1.enqueue
 2.dequeue
@@ -230,7 +305,31 @@ Select the operation :
 4.exit
 Enter your choice : 2
 
-Removed elmement : 60
+Removed elmement : 400
+Select the operation :
+1.enqueue
+2.dequeue
+3.count
+4.exit
+Enter your choice : 2
+
+Removed elmement : 500
+Select the operation :
+1.enqueue
+2.dequeue
+3.count
+4.exit
+Enter your choice : 2
+
+Removed elmement : 600
+Select the operation :
+1.enqueue
+2.dequeue
+3.count
+4.exit
+Enter your choice : 2
+
+Removed elmement : 700
 Select the operation :
 1.enqueue
 2.dequeue
@@ -258,5 +357,6 @@ Select the operation :
 Enter your choice : 4
 
 Quitting
-Process returned 0 (0x0)   execution time : 71.087 s
-Press any key to continue. */
+Process returned 0 (0x0)   execution time : 79.033 s
+Press any key to continue.
+*/
