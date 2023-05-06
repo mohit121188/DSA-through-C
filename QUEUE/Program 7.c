@@ -1,10 +1,11 @@
 /*Write a C program to calculate the sum of the elements in a linear queue.
 after calculating sum original queue must not be disturbed*/
 #include<stdio.h>
-#define max 5
+#define MAX 5
+#define DEFAULT {.front=-1,.rear=-1}
 struct lqueue
 {
-    int arr[max],front,rear;
+    int arr[MAX],front,rear;
 };
 typedef struct lqueue lqueue;
 void enqueue(lqueue *,int);
@@ -13,9 +14,8 @@ int isempty_queue(lqueue);
 int sum(lqueue);
 int main()
 {
-    lqueue q;
+    lqueue q=DEFAULT;
     int choice,x;
-    q.front=q.rear=-1;
     do
     {
         printf("\nSelect the operation : ");
@@ -49,12 +49,12 @@ int main()
 }
 void enqueue(lqueue *pq,int x)
 {
-    if(pq->rear==max-1)
+    if(pq->rear==MAX-1)
     {
         printf("\n!!Linear Queue Overflow!!\n");
         return;
     }
-    if(pq->rear==-1&&pq->front==-1)
+    if(pq->rear==-1)
         pq->rear=pq->front=0;
     else
         pq->rear=pq->rear+1;
@@ -65,7 +65,7 @@ void enqueue(lqueue *pq,int x)
 int dequeue(lqueue *pq)
 {
     int x;
-    if(pq->rear==-1&&pq->front==-1)
+    if(pq->rear==-1)
     {
         printf("\n!!!Queue Underflow!!!\n");
         return -1;
@@ -79,7 +79,7 @@ int dequeue(lqueue *pq)
 }
 int isempty_queue(lqueue q)
 {
-    return(q.front==-1&&q.rear==-1);
+    return(q.rear==-1);
 }
 int sum(lqueue q)
 {
@@ -94,7 +94,7 @@ int sum(lqueue q)
     return s;
 }
 
-/*sample output
+/* SAMPLE OUTPUT 
 
 Select the operation :
 1.enqueue
@@ -104,6 +104,15 @@ Select the operation :
 Enter your choice : 1
 
 enter the element : 10
+
+Select the operation :
+1.enqueue
+2.dequeue
+3.sum
+4.quit
+Enter your choice : 3
+
+sum is 10
 
 Select the operation :
 1.enqueue
@@ -204,47 +213,9 @@ Select the operation :
 2.dequeue
 3.sum
 4.quit
-Enter your choice : 2
+Enter your choice : 3
 
-dequeued element : 20
-
-Select the operation :
-1.enqueue
-2.dequeue
-3.sum
-4.quit
-Enter your choice : 2
-
-dequeued element : 30
-
-Select the operation :
-1.enqueue
-2.dequeue
-3.sum
-4.quit
-Enter your choice : 2
-
-dequeued element : 40
-
-Select the operation :
-1.enqueue
-2.dequeue
-3.sum
-4.quit
-Enter your choice : 2
-
-dequeued element : 50
-
-Select the operation :
-1.enqueue
-2.dequeue
-3.sum
-4.quit
-Enter your choice : 2
-
-!!!Queue Underflow!!!
-
-dequeued element : -1
+sum is 140
 
 Select the operation :
 1.enqueue
@@ -254,6 +225,6 @@ Select the operation :
 Enter your choice : 4
 
 Quitting the Application
-Process returned 0 (0x0)   execution time : 135.961 s
-Press any key to continue. 
+Process returned 0 (0x0)   execution time : 62.347 s
+Press any key to continue.
 */
