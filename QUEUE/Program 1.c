@@ -13,18 +13,18 @@ Step 4: INCREMENT the FRONT by 1.
 Step 5: RETURN the DELETED element.
 */
 #include<stdio.h>
-#define max 5
+#define MAX 5
+#define DEFAULTS {.front=-1,.rear=-1}
 struct queue
 {
-int arr[max],front,rear;
+int arr[MAX],front,rear;
 };
 typedef struct queue queue;
 void enqueue(queue *,int);
 int dequeue(queue *);
 int main()
 {
-    queue q;
-    q.front=q.rear=-1;
+    queue q=DEFAULTS;
     int choice,x;
     do
     {
@@ -56,9 +56,9 @@ int main()
 }
 void enqueue(queue *pq,int x)
 {
-    if(pq->rear==max-1)
+    if(pq->rear==MAX-1)
     {
-        printf("\nQueue is overflow!!\n");
+        printf("\n!!!Queue overflow!!!\n");
         return;
     }
     if(pq->rear==-1)
@@ -72,7 +72,7 @@ int dequeue(queue *pq)
     int x;
     if(pq->front==-1)
     {
-        printf("\nQueue Underflow\n");
+        printf("\n!!!Queue Underflow!!!\n");
         return -1;
     }
     x=pq->arr[pq->front];
@@ -82,17 +82,8 @@ int dequeue(queue *pq)
         pq->front++;
     return(x);
 }
-/*Sample Output : 
 
-Select the operation :
-1.enqueue
-2.dequeue
-3.quit
-Enter your choice : 2
-
-Queue Underflow
-
-Removed element : -1
+/* SAMPLE OUTPUT
 
 Select the operation :
 1.enqueue
@@ -142,7 +133,7 @@ Enter your choice : 1
 
 Enter element : 60
 
-Queue is overflow!!
+!!!Queue overflow!!!
 
 Select the operation :
 1.enqueue
@@ -190,7 +181,7 @@ Select the operation :
 3.quit
 Enter your choice : 2
 
-Queue Underflow
+!!!Queue Underflow!!!
 
 Removed element : -1
 
@@ -201,7 +192,6 @@ Select the operation :
 Enter your choice : 3
 
 Quitting the Application
-Process returned 0 (0x0)   execution time : 28.204 s
+Process returned 0 (0x0)   execution time : 25.019 s
 Press any key to continue.
-
 */
