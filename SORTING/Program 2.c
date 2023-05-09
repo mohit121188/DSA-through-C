@@ -1,4 +1,10 @@
 //SELECTION SORTING
+/* Steps SELECTION SORTING : 
+1.  Find the smallest value in the list.
+2.  Swap it with the first value in the list.
+3.  Repeat the above steps for the remaining unsorted portion of the list.
+4.  Continue this process until the entire list is sorted.
+*/
 #include<stdio.h>
 #include<stdlib.h>
 //prototype declaration of functions
