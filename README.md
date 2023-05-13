@@ -1,6 +1,7 @@
 # DSA through C
 
 <b><ins>STACK</ins></b>
+  <br><b>Note: Stack is implemented using array in all the given below programs(Program no.1 to program no. 10)</b>
   <br><b>Program 1:</b> push and pop operation on the stack
   <br><b>Program 2:</b> program to reverse a string using stack.
   <br><b>Program 3:</b> program which takes a valid postfix expression as input then calculates the final evaluated value of this postfix expression using stack.Assumption:- here user will enter postfix expression with single digit operand only and maximum length of postfix expression is 29*/
@@ -16,8 +17,12 @@ alphabet, parenthesis are also allowed in the infix expression
 <br><b>Program 10:</b>Next greater element: Given an array, for each element, find the next greater element in the array
 (e.g., for the array [4, 5, 2, 25], the next greater element for 4 is 5, for 5 is 25, for 2 is 25,
  and for 25 there is no greater element).
+ <br><br><b>Note: Stack is implemented using singly linked list in all the given below programs</b>
+ <br><b>Program 11:</b>Program to implement a stack, perfrom push,pop,isempty,peek operation.
+ 
 <br><br>
 <b><ins>LINEAR AND CIRCULAR QUEUE</ins></b>
+<br><b>Note : Linear and circular Queue are implemented using array in given below programs.</b>
 <br><b>Program 1:</b>Program to implement a linear queue.
 <br><b>Program 2:</b>Implement enqueue and dequeue operation on circular queue of max size 5.
 <br><b>Program 3:</b>Write a C program to count the number of elements in a Linear queue.
