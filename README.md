@@ -13,6 +13,9 @@ each operand can be either a single digit or a single alphbate. note: user can e
 <br><b>Program 8:</b>infix to prefix conversion. assumptions: user will enter valid infix expression only, max length of operand can be single digit or single
 alphabet, parenthesis are also allowed in the infix expression
 <br><b>Program 9:</b>Given a string containing parentheses (e.g., "(()())"), determine whether the parentheses are balanced or not.
+<br><b>Program 10:</b>Next greater element: Given an array, for each element, find the next greater element in the array
+(e.g., for the array [4, 5, 2, 25], the next greater element for 4 is 5, for 5 is 25, for 2 is 25,
+ and for 25 there is no greater element).
 <br><br>
 <b><ins>LINEAR AND CIRCULAR QUEUE</ins></b>
 <br><b>Program 1:</b>Program to implement a linear queue.
