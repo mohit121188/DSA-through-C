@@ -42,7 +42,13 @@ alphabet, parenthesis are also allowed in the infix expression
                      <br>(10)count the nodes
                      <br>(11)reverse the list
                      <br>(12)remove duplicate elements from the list
-                     <br>(13)clear the list
-                     <br>(14)quit the program
+                     <br>(13)remove nodes having a specific key value from the list
+                     <br>(14)largest value in the linked list
+                     <br>(15)smallest value in the linked list
+                     <br>(16)find nth node from the begining
+                     <br>(17)find nth node from the end
+                     <br>(18)clear the list
+                     <br>(19)Quit
+                     
  <br><b>Program 2:</b>
       
