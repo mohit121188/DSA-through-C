@@ -1,4 +1,3 @@
-/*Perform various operations over SINGLY LINKED LIST*/
 #include<stdio.h>
 #include<stdlib.h>
 //defining structure for node of list
@@ -20,11 +19,16 @@ void display_list(node *);
 int count_nodes(node *);
 void reverse_list(node **);
 void remove_duplicate(node **);
+void del_data(node **,int);
+int largest_val(node *);
+int smallest_val(node *);
 void clear_list(node **);
+int nth_node_from_start(node *,int);
+int nth_node_from_end(node *,int);
 int main()
 {
     node *start=NULL;
-    int choice,x,pos,y;
+    int choice,x,pos,y,n;
     do
     {
         system("cls");
@@ -41,8 +45,13 @@ int main()
         printf("\n10.count the nodes");
         printf("\n11.reverse the list");
         printf("\n12.remove duplicate elements from the list");
-        printf("\n13.clear the list");
-        printf("\n14.quit");
+        printf("\n13.remove node with given data from the list");
+        printf("\n14.largest value in the linked list");
+        printf("\n15.smallest value in the linked list");
+        printf("\n16.find nth node from the begining");
+        printf("\n17.find nth node from the end");
+        printf("\n18.clear the list");
+        printf("\n19.quit");
         printf("\nenter your choice :");
         scanf("%d",&choice);
         switch(choice)
@@ -88,7 +97,7 @@ int main()
             getch();
             break;
         case 7:
-            printf("\nenter data key value to be searched : ");
+            printf("\nenter data : ");
             scanf("%d",&x);
             pos=search_pos(start,x);
             if(pos==-1)
@@ -130,14 +139,59 @@ int main()
             getch();
             break;
         case 13:
-            clear_list(&start);
-            printf("\n\"list is destroyed successfully\"\n");
+            printf("\nenter the data : ");
+            scanf("%d",&x);
+            del_data(&start,x);
             printf("\n\"press any key to continue......\"\n");
             getch();
             break;
+
         case 14:
+            x=largest_val(start);
+            if(x!=-1)
+                printf("\n\"largest value is %d\"\n",x);
+             printf("\n\"press any key to continue......\"\n");
+             getch();
+             break;
+
+        case 15:
+            x=smallest_val(start);
+            if(x!=-1)
+                printf("\n\"smallest value is %d\"\n",x);
+             printf("\n\"press any key to continue......\"\n");
+             getch();
+             break;
+
+        case 16:
+            printf("\nenter value of n(nth node from start) :");
+            scanf("%d",&n);
+            x=nth_node_from_start(start,n);
+            if(x!=-1)
+                printf("\n\"%dth node from the start is %d\"\n",n,x);
+            printf("\n\"press any key to continue......\"\n");
+             getch();
+             break;
+
+            case 17:
+            printf("\nenter value of n(nth node from end) :");
+            scanf("%d",&n);
+            x=nth_node_from_end(start,n);
+            if(x!=-1)
+                printf("\n\"%dth node from the end is %d\"\n",n,x);
+            printf("\n\"press any key to continue......\"\n");
+             getch();
+             break;
+
+        case 18:
             clear_list(&start);
-            printf("\n\"linked list is destroyed successfully\"\n");
+            printf("\n\"list is cleared successfully\"\n");
+            printf("\n\"press any key to continue......\"\n");
+            getch();
+            break;
+
+        case 19:
+            clear_list(&start);
+            printf("\n\"linked list is cleared successfully\"\n");
             printf("\n\"Quitting Application\"\n");
             exit(0);
         }
@@ -502,10 +556,153 @@ void remove_duplicate(node **pstart)
         printf("\n\"all duplicate elements are removed from the singly linked list\"\n");
 }
 
+//13. defining the del_data function
+void del_data(node **pstart,int x)
+{
+    node *current_node=*pstart;
+    node *prev_node=NULL;
+    int flag=0;
+    if(*pstart==NULL)
+    {
+        printf("\n\"linked list is empty\"\n");
+        return;
+    }
+    while(current_node!=NULL)
+    {
+        if(current_node->data==x)
+        {
+            flag=1;
+            if(current_node==*pstart)
+            {
+                *pstart=current_node->next;
+                free(current_node);
+                current_node=*pstart;
+
+            }
+            else
+                if(current_node->next==NULL)
+            {
+                prev_node->next=NULL;
+                free(current_node);
+                current_node=NULL;
+
+            }
+            else
+            {
+                prev_node->next=current_node->next;
+                free(current_node);
+                current_node=prev_node->next;
+
+            }
+        }
+        else
+        {
+            prev_node=current_node;
+            current_node=current_node->next;
+        }
+    }
+    if(flag==1)
+        printf("\n\"%d is removed from the singly linked list\"\n",x);
+    else
+        printf("\n\"%d is not found in the singly linked list\"\n",x);
+}
+
+//14.defining larget_val function
+int largest_val(node *start)
+{
+    int max;
+    node *temp=start;
+    if(start==NULL)
+    {
+        printf("\n\"singly linked list is empty\"\n");
+        return -1;
+    }
+    max=start->data;
+    while(temp!=NULL)
+    {
+        if(max<temp->data)
+            max=temp->data;
+        temp=temp->next;
+    }
+    return max;
+}
+
+//15. defining smallest_val function
+int smallest_val(node *start)
+{
+    int min;
+    node *temp=start;
+    if(start==NULL)
+    {
+      printf("\n\"singly linked list is empty\"\n");
+      return -1;
+    }
+    min=start->data;
+    while(temp!=NULL)
+    {
+        if(min>temp->data)
+            min=temp->data;
+        temp=temp->next;
+    }
+    return min;
+}
+
+//16.defining function nth_node_from_start
+int nth_node_from_start(node *start,int n)
+{
+    node *temp=start;
+    int i;
+    if(start==NULL)
+    {
+        printf("\n\"singly linked list is empty\"\n");
+        return -1;
+    }
+    if(n>count_nodes(start))
+    {
+        printf("\n\"INVALID value of n: higher than total nodes\"\n");
+        return -1;
+    }
+    if(n<=0)
+    {
+        printf("\n\"INVALID value of n : value of n can't be less than or equal to zero\"\n");
+        return -1;
+    }
+    for(i=1;i<=n-1;i++)
+    {
+        temp=temp->next;
+    }
+    return(temp->data);
+}
+//17.defining function nth_node_from_end
+int nth_node_from_end(node *start,int n)
+{
+    node *temp=start;
+    int i;
+    if(start==NULL)
+    {
+        printf("\n\"singly linked list is empty\"\n");
+        return -1;
+    }
+    if(n>count_nodes(start))
+    {
+        printf("\n\"INVALID value of n: higher than total nodes\"\n");
+        return -1;
+    }
+    if(n<=0)
+    {
+        printf("\n\"INVALID value of n : value of n can't be less than or equal to zero\"\n");
+        return -1;
+    }
+    n=count_nodes(start)-n+1;
+    for(i=1;i<=n-1;i++)
+    {
+        temp=temp->next;
+    }
+    return(temp->data);
 
 
-
-//13,14. defining the clear_list function
+}
+//18,19. defining the clear_list function
 void clear_list(node **pstart)
 {
     node *temp=*pstart;
