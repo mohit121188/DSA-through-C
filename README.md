@@ -54,5 +54,5 @@ alphabet, parenthesis are also allowed in the infix expression
                      <br>(17)find nth node from the end
                      <br>(18)clear the list
                      <br>(19)Quit
-<br><b>Program 2:</b> Program to take a string as input dynamically and store the string in linked list, Then retrieve it in a char array as string*/
+<br><b>Program 2:</b> Program to take a string as input dynamically and store the string in a singly linked list, Then retrieve it in a char array as string*/
       
