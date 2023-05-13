@@ -25,7 +25,21 @@ alphabet, parenthesis are also allowed in the infix expression
 <br><b>Program 8:</b>Write a C program to calculate the sum of the elements in a circular queue, after calculating sum original queue must not be disturbed.
 <br><b>Program 9:</b>Write a C program to find the largest element and smallest element in the linear queue
 <br><br>
-<b>SINGLY LINKED LIST
-<br><b>Program 1:</b> Write a C program to implement a singly linked list program, which can perform following operations on the linked list
-                     <br>(a)insert data at end
+<b>SINGLY LINKED LIST</b>
+<br><b>Program 1:</b> Write a user interactive menu driven program C program to implement a singly linked list program, which can perform following operations: 
+                     <br>(1)insert data at end
+                     <br>(2)delete data from end
+                     <br>(3)insert data at beginning
+                     <br>(4)delete data from beginning
+                     <br>(5)insert data at a specific position
+                     <br>(6)delete data from a specific position
+                     <br>(7)search the position of a node on the basis of key data value
+                     <br>(8)find and replace
+                     <br>(9)display the list
+                     <br>(10)count the nodes
+                     <br>(11)reverse the list
+                     <br>(12)remove duplicate elements from the list
+                     <br>(13)clear the list
+                     <br>(14)quit the program
+ <br><b>Program 2:</b>
       
