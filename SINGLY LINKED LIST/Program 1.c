@@ -45,7 +45,7 @@ int main()
         printf("\n10.count the nodes");
         printf("\n11.reverse the list");
         printf("\n12.remove duplicate elements from the list");
-        printf("\n13.remove node with given data from the list");
+        printf("\n13.remove nodes having a specific key value from the list");
         printf("\n14.largest value in the linked list");
         printf("\n15.smallest value in the linked list");
         printf("\n16.find nth node from the begining");
@@ -673,7 +673,7 @@ int nth_node_from_start(node *start,int n)
     }
     return(temp->data);
 }
-//17.defining function nth_node_from_end
+//17.defining nth_node_from_end function
 int nth_node_from_end(node *start,int n)
 {
     node *temp=start;
