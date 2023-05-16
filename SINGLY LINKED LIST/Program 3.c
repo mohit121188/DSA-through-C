@@ -1,7 +1,59 @@
-/*Program to reverse a text(multiple lines string) entered by user, there should not be any limit on the length of the text
+/*write aProgram to reverse a text(multiple lines string) entered by user, there should not be any limit on the length of the text
 from programmer's side, limit on the length of the text will be imposed by operating system depending
-on the RAM of computer, retrieve reversed text in an char array, then print it on console, then re-reverse the text and retrieve
-it in an char array to obtain the original text and print it*/
+on the RAM of computer, reverse the text then retrieve it in a char array, then print it on console, after that again reverse the text and retrieve
+it in an char array and print it on console*/
+
+/*SAMPLE OUTPUT
+
+enter a text :
+Note:start your text from next line and end it with two consecutive enter key :
+Name:   Mohit Jain
+Age:    35 Years
+Degree: ME
+Field:  CSE
+College:IET-DAVV, Indore(MP)
+Skills: C,C++,DSA
+Job:    Teacher
+City:   Indore, Indore is a beautiful city, famous for it's food, it is commercial capital of MP.
+
+
+text you entered :
+Name:   Mohit Jain
+Age:    35 Years
+Degree: ME
+Field:  CSE
+College:IET-DAVV, Indore(MP)
+Skills: C,C++,DSA
+Job:    Teacher
+City:   Indore, Indore is a beautiful city, famous for it's food, it is commercial capital of MP.
+
+text after reversal :
+.PM fo latipac laicremmoc si ti ,doof s'ti rof suomaf ,ytic lufituaeb a si erodnI ,erodnI       :ytiC
+rehcaeT :boJ
+ASD,++C,C       :sllikS
+)PM(erodnI ,VVAD-TEI:egelloC
+ESC     :dleiF
+EM :eergeD
+sraeY 53        :egA
+niaJ tihoM      :emaN
+
+text after re-reversal :
+Name:   Mohit Jain
+Age:    35 Years
+Degree: ME
+Field:  CSE
+College:IET-DAVV, Indore(MP)
+Skills: C,C++,DSA
+Job:    Teacher
+City:   Indore, Indore is a beautiful city, famous for it's food, it is commercial capital of MP.
+
+
+Process returned 0 (0x0)   execution time : 176.123 s
+Press any key to continue.
+
+*/
+
+
 #include<stdio.h>
 #include<stdlib.h>
 #define DEFAULTS_STRING {.head=NULL}
@@ -233,52 +285,3 @@ void reverseString(String *pstr)
     }
 
 }
-/*SAMPLE OUTPUT
-
-enter a text :
-Note:start your text from next line and end it with two consecutive enter key :
-Name:   Mohit Jain
-Age:    35 Years
-Degree: ME
-Field:  CSE
-College:IET-DAVV, Indore(MP)
-Skills: C,C++,DSA
-Job:    Teacher
-City:   Indore, Indore is a beautiful city, famous for it's food, it is commercial capital of MP.
-
-
-text you entered :
-Name:   Mohit Jain
-Age:    35 Years
-Degree: ME
-Field:  CSE
-College:IET-DAVV, Indore(MP)
-Skills: C,C++,DSA
-Job:    Teacher
-City:   Indore, Indore is a beautiful city, famous for it's food, it is commercial capital of MP.
-
-text after reversal :
-.PM fo latipac laicremmoc si ti ,doof s'ti rof suomaf ,ytic lufituaeb a si erodnI ,erodnI       :ytiC
-rehcaeT :boJ
-ASD,++C,C       :sllikS
-)PM(erodnI ,VVAD-TEI:egelloC
-ESC     :dleiF
-EM :eergeD
-sraeY 53        :egA
-niaJ tihoM      :emaN
-
-text after re-reversal :
-Name:   Mohit Jain
-Age:    35 Years
-Degree: ME
-Field:  CSE
-College:IET-DAVV, Indore(MP)
-Skills: C,C++,DSA
-Job:    Teacher
-City:   Indore, Indore is a beautiful city, famous for it's food, it is commercial capital of MP.
-
-
-Process returned 0 (0x0)   execution time : 176.123 s
-Press any key to continue.
-
-*/
