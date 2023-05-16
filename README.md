@@ -17,8 +17,6 @@ alphabet, parenthesis are also allowed in the infix expression
 <br><b>Program 10:</b>Next greater element: Given an array, for each element, find the next greater element in the array
 (e.g., for the array [4, 5, 2, 25], the next greater element for 4 is 5, for 5 is 25, for 2 is 25,
  and for 25 there is no greater element).
- <br><br><b>Note: Stack is implemented using singly linked list in all the given below programs</b>
- <br><b>Program 11:</b>Program to implement a stack, perfrom push,pop,isempty,peek operation.
  
 <br><br>
 <b><ins>LINEAR AND CIRCULAR QUEUE</ins></b>
@@ -54,11 +52,13 @@ alphabet, parenthesis are also allowed in the infix expression
                      <br>(17)find nth node from the end
                      <br>(18)clear the list
                      <br>(19)Quit
-<br><b>Program 2:</b> Program to take a string as input dynamically and store the string in a singly linked list, Then retrieve it in a char array as string
-<br><b>Program 3:</b> Write a program which perform following tasks:
+<br><b>Program 2:</b>implementing stack using singly linked list.
+<br><b>Program 3:</b> Program to take a string as input dynamically and store the string in a singly linked list, Then retrieve it in a char array as string
+<br><b>Program 4:</b> Write a program which perform following tasks:
                  <br> (1) it takes a text(multiple lines string) as input from the user dynamically
                  <br> (2) reverse the text and retrieve it in a char array and print it
                  <br> (3) again reverse the text and retrieve the original text in a char array and print it
                  <br><b>Note:</b> there should not be any limit on the length of the text from the programmer side, only contraint on the length of the text can be from OS                         side depending on the RAM of computer, check sample output in Program 3.c file inside the subfolder SINGLY LINKED LIST.
+<br><b>Program 5:</b>  
                  
       
