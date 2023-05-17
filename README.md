@@ -59,6 +59,7 @@ alphabet, parenthesis are also allowed in the infix expression
                  <br> (2) reverse the text and retrieve it in a char array and print it
                  <br> (3) again reverse the text and retrieve the original text in a char array and print it
                  <br><b>Note:</b> there should not be any limit on the length of the text from the programmer side, only contraint on the length of the text can be from OS                         side depending on the RAM of computer, check sample output in Program 3.c file inside the subfolder SINGLY LINKED LIST.
-<br><b>Program 5:</b>  Program to evaluate a postfix expression entered by user using stack, postfix expression and stack has no size limit,they are dynamic, only size limit can be imposed by OS depending on Heap size of memory
+<br><b>Program 5:</b>  Program to evaluate a postfix expression entered by user using stack, postfix expression and stack has no size limit from programmer's side,they are dynamic, only size limit can be imposed by OS depending on Heap size of memory.
+<br><b>Program 6:</b>
                  
       
