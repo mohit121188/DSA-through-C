@@ -142,7 +142,7 @@ char * listToArray(String str)
     arr[i]=NULL;
     return arr;
 }
-//defining prcd
+//defining precedence
 int precedence(char ch)
 {
     if(ch=='$')
@@ -154,7 +154,7 @@ int precedence(char ch)
     if(ch=='+'||ch=='-')
         return 1;
 }
-//defining cmp_prcd
+//defining doPop
 int doPop(char optr1,char optr2)
 {
     return(precedence(optr1)>=precedence(optr2));
