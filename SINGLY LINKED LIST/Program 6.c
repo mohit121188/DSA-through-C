@@ -405,7 +405,7 @@ char peek(Stack stk)
     else
         return(stk.tos->ch);
 }
-/*Sample output : 
+/*Sample output 1 : 
 enter infix expression : (4+(6*2))/(3-1)
 
 postfix expression is : 4 6 2 * + 3 1 - /
@@ -414,11 +414,20 @@ Process returned 0 (0x0)   execution time : 16.073 s
 Press any key to continue.
 */ 
 
-/*Sample Output : 
+/*Sample Output 2 : 
 enter infix expression : ((((((2+3)*5)-8)/4)+((7-2)*3))/((6*2)-1))+((9-4)*(12+(10/2)))
 
 postfix expression is : 2 3 + 5 * 8 - 4 / 7 2 - 3 * + 6 2 * 1 - / 9 4 - 12 10 2 / + * +
 
 Process returned 0 (0x0)   execution time : 40.863 s
+Press any key to continue.
+*/
+
+/*Sample Output 3:
+enter infix expression : x1+x2+(abc/10)%xyz
+
+postfix expression is : x1 x2 + abc 10 / xyz % +
+
+Process returned 0 (0x0)   execution time : 27.994 s
 Press any key to continue.
 */
