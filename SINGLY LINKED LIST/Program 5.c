@@ -76,6 +76,7 @@ int main()
         printf("\n\"Result is %f\"\n",result);
     freeString(&str);
     free(postfix);
+    postfix=NULL;
     return 0;
 }
 //defining createString
