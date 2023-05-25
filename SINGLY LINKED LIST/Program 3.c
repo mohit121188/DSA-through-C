@@ -1,4 +1,3 @@
-//Program to take a string as input dynamically and store the string in linked list.
 #include<stdio.h>
 struct node
 {
@@ -26,6 +25,7 @@ int main()
     str=list_to_string(start);
     printf("\nyour string : %s",str);
     free_list(&start);
+    free(str);
     return 0;
 }
 void insert_at_end(node **pstart,char ch)
@@ -104,6 +104,7 @@ void free_list(node **pstart)
     }
     *pstart=NULL;
 }
+
 /*SAMPLE OUTPUT
 
 Enter a string : hii, this is mohit, singly linked list is a very interesting topic of DSA.
