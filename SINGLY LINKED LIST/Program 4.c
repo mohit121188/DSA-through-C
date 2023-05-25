@@ -28,14 +28,14 @@ Job:    Teacher
 City:   Indore, Indore is a beautiful city, famous for it's food, it is commercial capital of MP.
 
 text after reversal :
-.PM fo latipac laicremmoc si ti ,doof s'ti rof suomaf ,ytic lufituaeb a si erodnI ,erodnI       :ytiC
-rehcaeT :boJ
-ASD,++C,C       :sllikS
+.PM fo latipac laicremmoc si ti ,doof s'ti rof suomaf ,ytic lufituaeb a si erodnI ,erodnI   :ytiC
+rehcaeT    :boJ
+ASD,++C,C :sllikS
 )PM(erodnI ,VVAD-TEI:egelloC
-ESC     :dleiF
+ESC  :dleiF
 EM :eergeD
-sraeY 53        :egA
-niaJ tihoM      :emaN
+sraeY 53    :egA
+niaJ tihoM   :emaN
 
 text after re-reversal :
 Name:   Mohit Jain
@@ -48,7 +48,7 @@ Job:    Teacher
 City:   Indore, Indore is a beautiful city, famous for it's food, it is commercial capital of MP.
 
 
-Process returned 0 (0x0)   execution time : 176.123 s
+Process returned 0 (0x0)   execution time : 7.206 s
 Press any key to continue.
 
 */
@@ -101,6 +101,9 @@ ListNode1 * pop(Stack *);
 isEmpty(Stack);
 //prototype declaration of reverseString function
 void reverseString(String *);
+//prototype declaration of freeAll function
+void freeString(String *);
+void freeStack(Stack *);
 //defining main function
 int main()
 {
@@ -121,6 +124,7 @@ int main()
     reverseString(&str);
     arr_str=listToString(str);
     printf("\ntext after re-reversal : \n%s\n",arr_str);
+    freeString(&str);
     return 0;
 }
 //Defining createString
@@ -283,5 +287,36 @@ void reverseString(String *pstr)
             temp->next=popped_element;
         }
     }
-
+freeStack(&stk);
+}
+//defining freeString
+void freeString(String *pstr)
+{
+    ListNode1 *temp=NULL,*next_node=NULL;
+    if(pstr->head==NULL)
+        return;
+    temp=pstr->head;
+    while(temp!=NULL)
+    {
+        next_node=temp->next;
+        free(temp);
+        temp=next_node;
+    }
+    pstr->head=NULL;
+}
+//defining freeStack
+void freeStack(Stack *pstk)
+{
+    ListNode2 *temp=NULL,*next_node=NULL;
+    if(pstk->tos==NULL)
+    {
+        return;
+    }
+    while(temp!=NULL)
+    {
+        next_node=temp->next;
+        free(temp);
+        temp=next_node;
+    }
+    pstk->tos=NULL;
 }
