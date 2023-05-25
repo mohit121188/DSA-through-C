@@ -43,6 +43,9 @@ void push(Stack *,char);
 char pop(Stack *);
 int isEmpty(Stack);
 char peek(Stack);
+//Declaring freeString and freeStack function
+void freeString(String *);
+void freeStack(Stack *);
 int main()
 {
     String infix=DEFAULTS_STRING;
@@ -52,6 +55,9 @@ int main()
     insertDelimiter(&infix);
     postfix=infixToPostfix(infix);
     printf("\npostfix expression is : %s\n",postfix);
+    freeString(&infix);
+    free(postfix);
+    postfix=NULL;
     return 0;
 }
 //defining inputString
@@ -354,6 +360,7 @@ char * infixToPostfix(String infix)
       strcat(postfix,popped_element);
       strcat(postfix," ");
   }
+  freeStack(&stk);
 return postfix;
 
 }
@@ -405,6 +412,39 @@ char peek(Stack stk)
     else
         return(stk.tos->ch);
 }
+//defining freeStack
+void freeStack(Stack *pstk)
+{
+    ListNode *temp=NULL,*next_node=NULL;
+    if(pstk->tos==NULL)
+    {
+        return;
+    }
+    temp=pstk->tos;
+    while(temp!=NULL)
+    {
+        next_node=temp->next;
+        free(temp);
+        temp=next_node;
+    }
+    pstk->tos=NULL;
+}
+//defining freeString
+void freeString(String *pstr)
+{
+    ListNode *temp=NULL,*next_node=NULL;
+    if(pstr->head==NULL)
+        return;
+    temp=pstr->head;
+    while(temp!=NULL)
+    {
+        next_node=temp->next;
+        free(temp);
+        temp=next_node;
+    }
+    pstr->head=NULL;
+}
+
 /*Sample output 1 : 
 enter infix expression : (4+(6*2))/(3-1)
 
