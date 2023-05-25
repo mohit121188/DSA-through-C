@@ -129,11 +129,218 @@ int peek(stack s)
 void free_nodes(stack *ps)
 {
     node *temp=ps->tos;
+    node *next_node=NULL;
     if(ps->tos==NULL)
         return;
     while(temp!=NULL)
     {
+        next_node=temp->next;
         free(temp);
-        temp=temp->next;
+        temp=next_node;
     }
+    ps->tos=NULL;
 }
+/*SAMPLE OUTPUT : 
+select the operation :
+1.push
+2.pop
+3.isempty
+4.peek
+5.quit
+enter your choice : 1
+
+enter the data element : 10
+
+select the operation :
+1.push
+2.pop
+3.isempty
+4.peek
+5.quit
+enter your choice : 1
+
+enter the data element : 20
+
+select the operation :
+1.push
+2.pop
+3.isempty
+4.peek
+5.quit
+enter your choice : 1
+
+enter the data element : 30
+
+select the operation :
+1.push
+2.pop
+3.isempty
+4.peek
+5.quit
+enter your choice : 1
+
+enter the data element : 40
+
+select the operation :
+1.push
+2.pop
+3.isempty
+4.peek
+5.quit
+enter your choice : 1
+
+enter the data element : 50
+
+select the operation :
+1.push
+2.pop
+3.isempty
+4.peek
+5.quit
+enter your choice : 2
+
+"popped element is 50"
+
+select the operation :
+1.push
+2.pop
+3.isempty
+4.peek
+5.quit
+enter your choice : 2
+
+"popped element is 40"
+
+select the operation :
+1.push
+2.pop
+3.isempty
+4.peek
+5.quit
+enter your choice : 2
+
+"popped element is 30"
+
+select the operation :
+1.push
+2.pop
+3.isempty
+4.peek
+5.quit
+enter your choice : 2
+
+"popped element is 20"
+
+select the operation :
+1.push
+2.pop
+3.isempty
+4.peek
+5.quit
+enter your choice : 2
+
+"popped element is 10"
+
+select the operation :
+1.push
+2.pop
+3.isempty
+4.peek
+5.quit
+enter your choice : 2
+
+"STACK UNDERFLOW"
+
+select the operation :
+1.push
+2.pop
+3.isempty
+4.peek
+5.quit
+enter your choice : 3
+
+"stack is empty"
+
+select the operation :
+1.push
+2.pop
+3.isempty
+4.peek
+5.quit
+enter your choice : 4
+
+"stack is empty"
+
+select the operation :
+1.push
+2.pop
+3.isempty
+4.peek
+5.quit
+enter your choice : 1
+
+enter the data element : 10
+
+select the operation :
+1.push
+2.pop
+3.isempty
+4.peek
+5.quit
+enter your choice : 2
+
+"popped element is 10"
+
+select the operation :
+1.push
+2.pop
+3.isempty
+4.peek
+5.quit
+enter your choice : 2
+
+"STACK UNDERFLOW"
+
+select the operation :
+1.push
+2.pop
+3.isempty
+4.peek
+5.quit
+enter your choice : 1
+
+enter the data element : 100
+
+select the operation :
+1.push
+2.pop
+3.isempty
+4.peek
+5.quit
+enter your choice : 1
+
+enter the data element : 200
+
+select the operation :
+1.push
+2.pop
+3.isempty
+4.peek
+5.quit
+enter your choice : 1
+
+enter the data element : 300
+
+select the operation :
+1.push
+2.pop
+3.isempty
+4.peek
+5.quit
+enter your choice : 5
+
+"quitting the application"
+"dynamic memory is deallocated and returned to the heap memory pool."
+
+Process returned 0 (0x0)   execution time : 43.930 s
+Press any key to continue.*/
