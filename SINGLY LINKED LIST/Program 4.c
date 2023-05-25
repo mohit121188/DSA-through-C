@@ -125,6 +125,8 @@ int main()
     arr_str=listToString(str);
     printf("\ntext after re-reversal : \n%s\n",arr_str);
     freeString(&str);
+    free(arr_str);
+    arr_str=NULL;
     return 0;
 }
 //Defining createString
@@ -320,3 +322,4 @@ void freeStack(Stack *pstk)
     }
     pstk->tos=NULL;
 }
+
