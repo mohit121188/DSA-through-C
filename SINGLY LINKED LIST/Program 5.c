@@ -47,6 +47,9 @@ int isEmpty(Stack);
 int isStringDigits(char *);
 float calculate(float,char,float);
 float evalPostfix(char *);
+//declaring freeString,freeStack
+void freeString(String *);
+void freeStack(Stack *);
 //defining main
 int main()
 {
@@ -71,6 +74,8 @@ int main()
         printf("\n\"ERROR: NO EXPRESSION FOUND\"\n");
     else
         printf("\n\"Result is %f\"\n",result);
+    freeString(&str);
+    free(postfix);
     return 0;
 }
 //defining createString
@@ -266,8 +271,40 @@ float evalPostfix(char postfix[])
         token=strtok(NULL," ");
     }
     result=pop(&stk);
+    freeStack(&stk);
     return result;
 }
+//defining freeStack
+void freeStack(Stack *pstk)
+{
+    ListNode2 *temp=NULL,*next_node=NULL;
+    if(pstk->tos==NULL)
+        return;
+    temp=pstk->tos;
+    while(temp!=NULL)
+    {
+        next_node=temp->next;
+        free(temp);
+        temp=next_node;
+    }
+    pstk->tos=NULL;
+}
+//defining freeString
+void freeString(String *pstr)
+{
+    ListNode1 *temp=NULL,*next_node=NULL;
+    if(pstr->head==NULL)
+        return;
+    temp=pstr->head;
+    while(temp!=NULL)
+    {
+        next_node=temp->next;
+        free(temp);
+        temp=next_node;
+    }
+pstr->head=NULL;
+}
+
 
 /* SAMPLE OUTPUT
 
@@ -278,6 +315,6 @@ give your input : 10 5 + 20 * 30 2 / - 15 +
 
 "Result is 300.000000"
 
-Process returned 0 (0x0)   execution time : 45.116 s
+Process returned 0 (0x0)   execution time : 14.011 s
 Press any key to continue.
  */
