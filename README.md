@@ -58,8 +58,8 @@ alphabet, parenthesis are also allowed in the infix expression
                  <br> (1) it takes a text(multiple lines string) as input from the user dynamically
                  <br> (2) reverse the text and retrieve it in a char array and print it
                  <br> (3) again reverse the text and retrieve the original text in a char array and print it
-                 <br><b>Note:</b> there should not be any limit on the length of the text from the programmer side, only contraint on the length of the text can be from OS                         side depending on the RAM of computer, check sample output in Program 3.c file inside the subfolder SINGLY LINKED LIST.
-<br><b>Program 5:</b>  Program to evaluate a postfix expression entered by user using stack, postfix expression and stack has no size limit from programmer's side,they are dynamic, only size limit can be imposed by OS depending on Heap size of memory.
-<br><b>Program 6:</b> Program to convert an infix expression into it's equivalent postfix expression using stack. note: here both infix expression and stack are maintained dynamically using linked list, so there should be no limit on the length of infix expression from programmer's side, limit on the length of infix expression can be imposed by Operating System depending on availability of memory space
+<br><b>Program 5:</b>  Program to evaluate a postfix expression entered by user using stack. Note:  both postfix expression and stack should be dynamic and implement them using linked list.
+<br><b>Program 6:</b> Program to convert an infix expression into it's equivalent postfix expression using stack. note: here both infix expression and stack are maintained dynamically using linked list.
+<br><b>Program 7:</b> Program to evaluate a prefix expression using stack. both prefix expression and stack are maintained dynamically using linked list.
                  
       
