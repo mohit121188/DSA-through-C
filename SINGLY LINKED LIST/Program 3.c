@@ -9,6 +9,7 @@ typedef struct node node;
 void insert_at_end(node **,char);
 int count_nodes(node *);
 char * list_to_string(node *);
+void free_list(node **);
 int main()
 {
     char ch=NULL,*str;
@@ -24,6 +25,7 @@ int main()
     }
     str=list_to_string(start);
     printf("\nyour string : %s",str);
+    free_list(&start);
     return 0;
 }
 void insert_at_end(node **pstart,char ch)
@@ -86,11 +88,27 @@ char * list_to_string(node *start)
     str[i]='\0';
     return str;
 }
+void free_list(node **pstart)
+{
+    node *temp=NULL,*next_node=NULL;
+    if(*pstart==NULL)
+    {
+        return;
+    }
+    temp=*pstart;
+    while(temp!=NULL)
+    {
+        next_node=temp->next;
+        free(temp);
+        temp=next_node;
+    }
+    *pstart=NULL;
+}
 /*SAMPLE OUTPUT
 
-Enter a string : Hii, This is Mohit Jain, C Programming gives us a very fast execution of the program, Dynamic memory allocation in C is an amazing concept, have a great day
+Enter a string : hii, this is mohit, singly linked list is a very interesting topic of DSA.
 
-your string : Hii, This is Mohit Jain, C Programming gives us a very fast execution of the program, Dynamic memory allocation in C is an amazing concept, have a great day
-Process returned 0 (0x0)   execution time : 111.761 s
+your string : hii, this is mohit, singly linked list is a very interesting topic of DSA.
+Process returned 0 (0x0)   execution time : 20.021 s
 Press any key to continue.
 */
