@@ -61,5 +61,6 @@ alphabet, parenthesis are also allowed in the infix expression
 <br><b>Program 5:</b>  Program to evaluate a postfix expression entered by user using stack. Note:  both postfix expression and stack should be dynamic and implement them using linked list.
 <br><b>Program 6:</b> Program to convert an infix expression into it's equivalent postfix expression using stack. note: here both infix expression and stack are maintained dynamically using linked list.
 <br><b>Program 7:</b> Program to evaluate a prefix expression using stack. both prefix expression and stack are maintained dynamically using linked list.
+<br><b>Program 8:</b> Program to convert an infix expression into prefix expression using stack. note:infix expression, stacks are dynamic in nature.
                  
       
