@@ -64,3 +64,5 @@ alphabet, parenthesis are also allowed in the infix expression
 <br><b>Program 8:</b> Program to convert an infix expression into prefix expression using stack. note:infix expression, stacks are dynamic in nature.
 <br><b>Program 9:</b> Program to implement a linear queue using singly linked list.
       
+<b><ins>Problems for Practice</ins></b>
+<br><b>Problem 1:</b> Write a program to evaluate an infix expression using two stacks.
