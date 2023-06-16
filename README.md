@@ -63,6 +63,28 @@ alphabet, parenthesis are also allowed in the infix expression
 <br><b>Program 7:</b> Program to evaluate a prefix expression using stack. both prefix expression and stack are maintained dynamically using linked list.
 <br><b>Program 8:</b> Program to convert an infix expression into prefix expression using stack. note:infix expression, stacks are dynamic in nature.
 <br><b>Program 9:</b> Program to implement a linear queue using singly linked list.
+
+<b><ins>DOUBLY LINKED LIST</ins></b>
+<br><b>Program 1:</b> Write a user interactive menu driven program C program to implement a DOUBLY linked list program, which can perform following operations: 
+                     <br>(1)insert data at end
+                     <br>(2)delete data from end
+                     <br>(3)insert data at beginning
+                     <br>(4)delete data from beginning
+                     <br>(5)insert data at a specific position
+                     <br>(6)delete data from a specific position
+                     <br>(7)search the position of a node on the basis of key data value
+                     <br>(8)find and replace
+                     <br>(9)display the list
+                     <br>(10)count the nodes
+                     <br>(11)reverse the list
+                     <br>(12)remove duplicate elements from the list
+                     <br>(13)remove nodes having a specific key value from the list
+                     <br>(14)largest value in the linked list
+                     <br>(15)smallest value in the linked list
+                     <br>(16)find nth node from the begining
+                     <br>(17)find nth node from the end
+                     <br>(18)clear the list
+                     <br>(19)Quit
       
 <b><ins>Problems for Practice</ins></b>
 <br><b>Problem 1:</b> Write a program to evaluate an infix expression using two stacks.
