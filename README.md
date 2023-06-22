@@ -65,26 +65,30 @@ alphabet, parenthesis are also allowed in the infix expression
 <br><b>Program 9:</b> Program to implement a linear queue using singly linked list.
 
 <b><ins>DOUBLY LINKED LIST</ins></b>
-<br><b>Program 1:</b> Write a user interactive menu driven program C program to implement a DOUBLY linked list program, which can perform following operations: 
-                     <br>(1)insert data at end
-                     <br>(2)delete data from end
-                     <br>(3)insert data at beginning
-                     <br>(4)delete data from beginning
-                     <br>(5)insert data at a specific position
-                     <br>(6)delete data from a specific position
-                     <br>(7)search the position of a node on the basis of key data value
-                     <br>(8)find and replace
-                     <br>(9)display the list
-                     <br>(10)count the nodes
-                     <br>(11)reverse the list
-                     <br>(12)remove duplicate elements from the list
-                     <br>(13)remove nodes having a specific key value from the list
-                     <br>(14)largest value in the linked list
-                     <br>(15)smallest value in the linked list
-                     <br>(16)find nth node from the begining
-                     <br>(17)find nth node from the end
-                     <br>(18)clear the list
-                     <br>(19)Quit
+<br><b>Program 1:</b> Write a user interactive menu driven C program to implement a DOUBLY linked list , which can perform following operations: 
+                  <br>1.  insert at the beginning
+                  <br>2. delete at the beginning
+                  <br>3.  insert at the end
+                  <br>4.  delete from the end
+                  <br>5.  insert at a specific position from beginning
+                  <br>6.  insert at a specific position from end
+                  <br>7.  delete from a specific position from beginning
+                  <br>8.  delete from a specific position from end
+                  <br>9.  search position of a node by it's data
+                  <br>10. find and replace the data
+                  <br>11. count the nodes in the list
+                  <br>12. reverse the list
+                  <br>13. remove duplicate from the list
+                  <br>14. remove data from the list
+                  <br>15. print largest value in the list
+                  <br>16. print smallest value in the list
+                  <br>17. print nth data from the beginning
+                  <br>18. print nth data from the end
+                  <br>19.  print the list in forward direction
+                  <br>20.  print the list in backward direction
+                  <br>21. clear the list
+                  <br>22. exit the application
+                  <br>23. clear screen
       
 <b><ins>Problems for Practice</ins></b>
 <br><b>Problem 1:</b> Write a program to evaluate an infix expression using two stacks.
