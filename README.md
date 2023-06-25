@@ -89,6 +89,17 @@ alphabet, parenthesis are also allowed in the infix expression
                   <br>21. clear the list
                   <br>22. exit the application
                   <br>23. clear screen
+
+<b><ins>CIRCULAR LINKED LIST</ins></b>
+<br><b>Program 1:</b> Write a user interactive menu driven C program to implement a DOUBLY linked list , which can perform following operations: 
+                  <br>1.  insert at the beginning
+                  <br>2. delete at the beginning
+                  <br>3.  insert at the end
+                  <br>4.  delete from the end
+                  <br>5.  print the list in forward direction
+                  <br>6. clear the list
+                  <br>7. exit the application
+                  <br>8. clear screen
       
 <b><ins>Problems for Practice</ins></b>
 <br><b>Problem 1:</b> Write a program to evaluate an infix expression using two stacks.
