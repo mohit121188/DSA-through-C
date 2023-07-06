@@ -100,6 +100,17 @@ alphabet, parenthesis are also allowed in the infix expression
                   <br>6. clear the list
                   <br>7. exit the application
                   <br>8. clear screen
+
+<b><ins>BINARY SEARCH TREE</ins></b>
+<br><b>Program 1:</b> Write a user interactive menu driven C program to implement a BINARY SEARCH TREE , which can perform following operations: 
+                  <br>1.  insert a new data
+                  <br>2.  level order traversal
+                  <br>3.  preorder traversal
+                  <br>4.  inorder traversal
+                  <br>5.  postorder traversal
+                  <br>6.  count the nodes
+                  <br>7.  clear the tree
+                  <br>8.  exit the application
       
 <b><ins>Problems for Practice</ins></b>
 <br><b>Problem 1:</b> Write a program to evaluate an infix expression using two stacks.
