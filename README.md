@@ -115,6 +115,9 @@ alphabet, parenthesis are also allowed in the infix expression
                   <br>10.  delete a node
                   <br>11.  clear the BST
                   <br>12.  exit the application
-      
+
+<b><ins>RECURSION</ins></b>
+<br><b>Problem 1:</b> Write a recursive program to calculate factorial of a number entered by user.
+
 <b><ins>Problems for Practice</ins></b>
 <br><b>Problem 1:</b> Write a program to evaluate an infix expression using two stacks.
