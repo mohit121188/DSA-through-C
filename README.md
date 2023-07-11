@@ -109,8 +109,12 @@ alphabet, parenthesis are also allowed in the infix expression
                   <br>4.  inorder traversal
                   <br>5.  postorder traversal
                   <br>6.  count the nodes
-                  <br>7.  clear the tree
-                  <br>8.  exit the application
+                  <br>7.  search a node
+                  <br>8.  max value
+                  <br>9.  min value
+                  <br>10.  delete a node
+                  <br>11.  clear the BST
+                  <br>12.  exit the application
       
 <b><ins>Problems for Practice</ins></b>
 <br><b>Problem 1:</b> Write a program to evaluate an infix expression using two stacks.
