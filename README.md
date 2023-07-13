@@ -125,6 +125,7 @@ alphabet, parenthesis are also allowed in the infix expression
 <br><b>Problem 6:</b> Write a Recursive program to print Array elements.
 <br><b>Problem 7:</b> Write a Recursive program to count number of digits in a integer number.
 <br><b>Problem 8:</b>Write a program in C to find the sum of digits of a number using recursion
+<br><b>Problem 9:</b>Write a recursive program in C to find the HCF of two integers entered by user.
 
 <b><ins>Problems for Practice</ins></b>
 <br><b>Problem 1:</b> Write a program to evaluate an infix expression using two stacks.
