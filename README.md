@@ -121,6 +121,7 @@ alphabet, parenthesis are also allowed in the infix expression
 <br><b>Problem 2:</b> Write a recursive program to calculate sum of integers from 1 to n, where value of n is entered by user.
 <br><b>Problem 3:</b> Write a program in C to print the first 20 natural numbers using recursion.
 <br><b>Problem 4:</b> Write a Recursive program to find nth element of the fibonacci series.
+<br><b>Problem 5:</b> Write a Recursive program to print first n elements of the fibonacci series where value of n is entered by user.
 
 <b><ins>Problems for Practice</ins></b>
 <br><b>Problem 1:</b> Write a program to evaluate an infix expression using two stacks.
