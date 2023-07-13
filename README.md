@@ -119,7 +119,7 @@ alphabet, parenthesis are also allowed in the infix expression
 <b><ins>RECURSION</ins></b>
 <br><b>Problem 1:</b> Write a recursive program to calculate factorial of a number entered by user.
 <br><b>Problem 2:</b> Write a recursive program to calculate sum of integers from 1 to n, where value of n is entered by user.
-<br><b>Problem 3:</b> Write a recursive program to print first n elements of fibonacci series.
+<br><b>Problem 3:</b> Write a program in C to print the first 50 natural numbers using recursion.
 
 <b><ins>Problems for Practice</ins></b>
 <br><b>Problem 1:</b> Write a program to evaluate an infix expression using two stacks.
