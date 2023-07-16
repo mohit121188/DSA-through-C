@@ -132,6 +132,7 @@ alphabet, parenthesis are also allowed in the infix expression
 <br><b>Problem 13:</b>Write a recursive program to convert a decimal number to it's equivalent binary number.
 <br><b>Problem 14:</b>Write a recursive program to check whether a number is prime or not.
 <br><b>Problem 15:</b>Write a recursive program to find the LCM of two numbers entered by user.
+<br><b>Problem 16:</b>Write a recursive program to print all the even number in a range of number from n1 to n2.
 
 <b><ins>Problems for Practice</ins></b>
 <br><b>Problem 1:</b> Write a program to evaluate an infix expression using two stacks.
