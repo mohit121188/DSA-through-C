@@ -2,9 +2,11 @@
 #include<stdio.h>
 int greatest(int arr[],int n)
 {
-        static int max=0,index=0;
+        static int max,index=0;
         if(index==n)
             return max;
+        if(index==0)
+            max=arr[0];
         if(max<arr[index])
             max=arr[index];
         index++;
@@ -31,6 +33,7 @@ int main()
     printf("\ngreatest number is %d",max);
     return 0;
 }
+
 
 
 //style 2:
