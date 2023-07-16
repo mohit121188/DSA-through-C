@@ -129,6 +129,7 @@ alphabet, parenthesis are also allowed in the infix expression
 <br><b>Problem 10:</b>Write a recursive program in C to find the largest number of an array.
 <br><b>Problem 11:</b>Write a recursive program in C to find the smallest number of an array.
 <br><b>Problem 12:</b>Write a recursive program to print reverse of a string entered by user.
+<br><b>Problem 13:</b>Write a recursive program to convert a decimal number to it's equivalent binary number.
 
 <b><ins>Problems for Practice</ins></b>
 <br><b>Problem 1:</b> Write a program to evaluate an infix expression using two stacks.
