@@ -127,6 +127,7 @@ alphabet, parenthesis are also allowed in the infix expression
 <br><b>Problem 8:</b>Write a program in C to find the sum of digits of a number using recursion
 <br><b>Problem 9:</b>Write a recursive program in C to find the HCF of two integers entered by user.
 <br><b>Problem 10:</b>Write a recursive program in C to find the largest number of an array.
+<br><b>Problem 11:</b>Write a recursive program in C to find the smallest number of an array.
 
 <b><ins>Problems for Practice</ins></b>
 <br><b>Problem 1:</b> Write a program to evaluate an infix expression using two stacks.
