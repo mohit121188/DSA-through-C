@@ -137,6 +137,7 @@ alphabet, parenthesis are also allowed in the infix expression
 <br><b>Problem 18:</b>Write a C program to check whether a given string is a palindrome or not using recursion.
 <br><b>Problem 19:</b>Write a program in C to calculate the power of any number using recursion.
 <br><b>Problem 20:</b>Write a C program to find the Hailstone Sequence of a given number up to 1
+<br><b>Problem 21:</b> Write a program in C to copy one string to another using recursion.
 
 <b><ins>Problems for Practice</ins></b>
 <br><b>Problem 1:</b> Write a program to evaluate an infix expression using two stacks.
