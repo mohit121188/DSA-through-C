@@ -115,6 +115,7 @@ alphabet, parenthesis are also allowed in the infix expression
                   <br>10.  delete a node
                   <br>11.  clear the BST
                   <br>12.  exit the application
+<br><b>Program 2:</b> Write a program in C to peform preorder,inorder and postorder traversal of a binary search tree, where all traversal algorithms are implemented recursively.  
 
 <b><ins>RECURSION</ins></b>
 <br><b>Problem 1:</b> Write a recursive program to calculate factorial of a number entered by user.
