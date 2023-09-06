@@ -117,6 +117,20 @@ alphabet, parenthesis are also allowed in the infix expression
                   <br>12.  exit the application
 <br><b>Program 2:</b> Write a program in C to peform preorder,inorder and postorder traversal of a binary search tree, where all traversal algorithms are implemented recursively.
 <br><b>Program 3:</b> Write a program in C to check the validity of a BST.
+<br><b>Program 4:</b> Write a menu driven program in C for BST. all the algorithms should be recursive.
+                      1. insert
+                      2. validate
+                      3. preorder traversal
+                      4. inorder traversal
+                      5. postorder traversal
+                      6. find a data
+                      7. find the parent node's data
+                      8. find min data element
+                      9. find max data element
+                      10. delete a data
+                      11. clear the tree
+                      12. Quit the application
+
 
 <b><ins>RECURSION</ins></b>
 <br><b>Problem 1:</b> Write a recursive program to calculate factorial of a number entered by user.
