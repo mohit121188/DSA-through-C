@@ -143,6 +143,19 @@ alphabet, parenthesis are also allowed in the infix expression
                       10. delete a data
                       11. clear the tree
                       12. Quit the application
+<br><b>Program 6:</b> Write a menu driven program in C for Height Balanced BST(AVL Search Tree). all the algorithms should be recursive.
+                      1. insert
+                      2. validate
+                      3. preorder traversal
+                      4. inorder traversal
+                      5. postorder traversal
+                      6. find a data
+                      7. find the parent node's data
+                      8. find min data element
+                      9. find max data element
+                      10. delete a data
+                      11. clear the tree
+                      12. Quit the application
 
 
 <b><ins>RECURSION</ins></b>
